@@ -8,7 +8,6 @@
 @license        GPLv3
 ==/UserStyle== */
 /*! License: https://www.gnu.org/licenses/gpl-3.0.html */
-
 @-moz-document domain("github.com") {
     div.pagehead>* {
         margin-right: auto;
@@ -36,10 +35,6 @@
         margin-right: auto;
         margin-left: auto;
         max-width: 1012px;
-    }
-
-    .repository-content>.gutter-condensed>:nth-child(1){
-        width: 100%;
     }
 
     /*
@@ -86,10 +81,6 @@
         margin-top: 16px;
     }
 
-    .repository-content>.gutter-condensed>:nth-child(2) {
-        display: none;
-    }
-
     /* second child, cauze before the first item, we have a "screenreader-only" html element that counts as first */
     .repository-content .js-navigation-item:not(:nth-child(2)) {
         border-top: 1px solid #eaecef !important;
@@ -122,5 +113,15 @@
         right: 100%;
         left: auto;
         margin-right: 8px;
+    }
+}
+
+@-moz-document regexp('^https?://(.*\\.)?github\\.com/[^/]*/[^/]*$') {
+    /* only remove the right sidebar when viewing the repository overview */
+    .repository-content>.gutter-condensed>:nth-child(1){
+        width: 100%;
+    }
+    .repository-content>.gutter-condensed>:nth-child(2) {
+        display: none;
     }
 }
