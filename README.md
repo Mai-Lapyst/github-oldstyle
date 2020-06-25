@@ -2,7 +2,7 @@
 a .user.css for Stylus and a user-script (tampermonkey) to reassemble the old github style
 
 [![Stylus badge](https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat)](https://raw.githubusercontent.com/Mai-Lapyst/github-oldstyle/master/github-oldstyle.user.css)
-[![Tampermonkey badge](https://img.shields.io/badge/Install%20directly%20with-Tampermonkey-black.svg?longCache=true&style=flat)](https://raw.githubusercontent.com/Mai-Lapyst/github-oldstyle/master/github-oldstyle.user.css)
+[![Tampermonkey badge](https://img.shields.io/badge/Install%20directly%20with-Tampermonkey-black.svg?longCache=true&style=flat)](https://raw.githubusercontent.com/Mai-Lapyst/github-oldstyle/master/github-oldstyle.user.js)
 
 ## Requirements
 
