@@ -1,0 +1,126 @@
+/* ==UserStyle==
+@name           Github-oldstyle
+@namespace      github.com/openstyles/stylus
+@homepageURL    https://github.com/Mai-Lapyst/github-oldstyle
+@version        1.0.0
+@description    A userstyle to change the style of github to its old style
+@author         Mai Lapyst
+@license        GPLv3
+==/UserStyle== */
+/*! License: https://www.gnu.org/licenses/gpl-3.0.html */
+
+@-moz-document domain("github.com") {
+    div.pagehead>* {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1012px;
+        box-shadow: none;
+    }
+
+    div.pagehead>:nth-child(2) {
+        display: block !important;
+    }
+
+    /*TODO: make this more like d-md-none!*/
+    div.pagehead>:nth-child(2)>:nth-last-child(1),
+    div.pagehead>:nth-child(2)>:nth-last-child(2),
+    div.pagehead>:nth-child(2)>:nth-last-child(3) {
+        display: none !important;
+    }
+
+    div.pagehead {
+        border-bottom: 1px solid #e1e4e8 !important;
+    }
+
+    div.new-discussion-timeline {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1012px;
+    }
+
+    .repository-content>.gutter-condensed>:nth-child(1){
+        width: 100%;
+    }
+
+    /*
+        Revert the curvy edges with css
+        For butttons, please use the userscript for now, it can better detect where to update the radias!
+    */
+    .social-count {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+    .dropdown-menu {
+        border: 1px solid rgba(27,31,35,.15);
+        border-radius: 4px;
+    }
+    .Box-header {
+        border-top-left-radius: 3px !important;
+        border-top-right-radius: 3px !important;
+        /*TODO: when zooming to strong, the box-heaader apears several pixel wider than its parent box!*/
+    }
+    .Box {
+        border-radius: 3px;
+    }
+
+    .overall-summary {
+        border-radius: 3px;
+    }
+    .numbers-summary li {
+        display: table-cell;
+        padding: 0;
+        text-align: center;
+        white-space: nowrap;
+    }
+    .numbers-summary li a {
+        padding: 10px 0;
+    }
+
+    .repository-lang-stats-graph {
+        border-radius: 0;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+    .file-navigation {
+        margin-bottom: 8px !important;
+        margin-top: 16px;
+    }
+
+    .repository-content>.gutter-condensed>:nth-child(2) {
+        display: none;
+    }
+
+    /* second child, cauze before the first item, we have a "screenreader-only" html element that counts as first */
+    .repository-content .js-navigation-item:not(:nth-child(2)) {
+        border-top: 1px solid #eaecef !important;
+    }
+
+    .avatar-user {
+        border-radius: 2px !important;
+    }
+    .color-blue-3 {
+        color: rgba(3,47,98,.5) !important;
+    }
+
+    .repository-lang-stats-numbers .text-small {
+        font-size: 14px;
+    }
+    .repository-lang-stats .repository-lang-stats-numbers li {
+        display: table-cell !important;
+        width: 1%;
+        padding: 10px 5px;
+        text-align: center;
+        white-space: nowrap;
+        border-bottom: 0;
+    }
+
+    /* Styles for the last commit */
+    .repository-content .js-details-container:nth-child(2) > :nth-child(2) > a {
+        margin-left: 5px;
+    }
+    .commit-build-statuses>.dropdown-menu {
+        right: 100%;
+        left: auto;
+        margin-right: 8px;
+    }
+}
